@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Manual Upload System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="register">
+    <main class="auth-shell">
+      <section class="auth-card glass-card">
+        <div class="auth-header">
+          <h1>Create Account</h1>
+          <p>Register to start uploading and managing manuals.</p>
+        </div>
+
+        <form id="registerForm" class="auth-form">
+          <div class="form-group">
+            <label for="registerName">Name</label>
+            <input id="registerName" type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="registerEmail">Email</label>
+            <input id="registerEmail" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">Password</label>
+            <input id="registerPassword" type="password" placeholder="Choose a password" required />
+          </div>
+          <button type="submit" class="primary-btn auth-submit">Register</button>
+        </form>
+
+        <div id="authMessage" class="message"></div>
+
+        <p class="auth-footer">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

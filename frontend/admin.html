@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Manual Upload System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="admin">
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-mark">A</span>
+          <div>
+            <h1>Admin Dashboard</h1>
+            <p>Manage users, files, and system analytics</p>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <span id="userNameDisplay" class="user-name"></span>
+          <button id="logoutBtn" class="secondary-btn">Logout</button>
+        </div>
+      </header>
+
+      <main class="admin-main">
+        <section class="stats-section">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-label">Total Users</div>
+              <div class="stat-value" id="statTotalUsers">0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Active Users</div>
+              <div class="stat-value stat-active" id="statActiveUsers">0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Blocked Users</div>
+              <div class="stat-value stat-danger" id="statBlockedUsers">0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Total Files</div>
+              <div class="stat-value" id="statTotalFiles">0</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Storage Used</div>
+              <div class="stat-value" id="statStorageUsed">0 MB</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="admin-panel glass-card">
+          <div class="admin-tabs">
+            <button class="tab-btn active" data-tab="users">Users</button>
+            <button class="tab-btn" data-tab="files">Files</button>
+          </div>
+
+          <div id="usersTab" class="tab-content active">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="usersTableBody">
+                <tr>
+                  <td colspan="5" class="text-center">Loading users...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="filesTab" class="tab-content">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>File Name</th>
+                  <th>Owner</th>
+                  <th>Size</th>
+                  <th>Uploaded</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="filesTableBody">
+                <tr>
+                  <td colspan="5" class="text-center">Loading files...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

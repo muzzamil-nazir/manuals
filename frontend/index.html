@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manual Upload System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="dashboard">
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-mark">M</span>
+          <div>
+            <h1>Manual Upload System</h1>
+            <p>Secure file uploads, previews, downloads and management</p>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <span id="userNameDisplay" class="user-name"></span>
+          <button id="logoutBtn" class="secondary-btn">Logout</button>
+        </div>
+      </header>
+
+      <main class="app-main">
+        <section class="upload-panel glass-card">
+          <div class="panel-header">
+            <h2>Upload Files</h2>
+            <span>Supported: PNG, JPG, JPEG, PDF, DOC, DOCX, TXT</span>
+          </div>
+
+          <div id="dropZone" class="drop-zone">
+            <p>Drag & drop files here</p>
+            <button type="button" id="selectFileBtn" class="secondary-btn">Select file</button>
+            <input id="fileInput" type="file" hidden />
+          </div>
+
+          <div class="upload-actions">
+            <div class="upload-meta">
+              <span id="selectedFileName">No file selected</span>
+            </div>
+            <button id="uploadBtn" class="primary-btn" disabled>Upload</button>
+          </div>
+
+          <div class="progress-bar" hidden>
+            <div id="progressBarFill" class="progress-fill"></div>
+          </div>
+
+          <div id="uploadMessage" class="message"></div>
+        </section>
+
+        <section class="user-info-panel glass-card">
+          <div class="user-info-header">
+            <h2>Account Information</h2>
+          </div>
+          <div class="user-info-content">
+            <div class="user-detail">
+              <span class="detail-label">Name:</span>
+              <span id="userDetailName" class="detail-value">—</span>
+            </div>
+            <div class="user-detail">
+              <span class="detail-label">Email:</span>
+              <span id="userDetailEmail" class="detail-value">—</span>
+            </div>
+            <div class="user-detail">
+              <span class="detail-label">Plan:</span>
+              <span id="userDetailPlan" class="detail-value plan-badge">Free</span>
+            </div>
+          </div>
+
+          <div class="storage-info">
+            <div class="storage-header">
+              <span>Storage Usage</span>
+              <span id="storageText" class="storage-text">0 MB / 100 MB</span>
+            </div>
+            <div class="storage-bar-container">
+              <div id="storageBar" class="storage-bar" style="width: 0%"></div>
+            </div>
+            <p id="storageStatus" class="storage-status">You have plenty of storage remaining.</p>
+          </div>
+
+          <div class="upgrade-section">
+            <h3>Upgrade to Premium</h3>
+            <ul class="upgrade-benefits">
+              <li>✓ 5,000 MB storage (50x more)</li>
+              <li>✓ Priority file processing</li>
+              <li>✓ Faster uploads</li>
+              <li>✓ Extended file retention</li>
+            </ul>
+            <button id="upgradeBtn" class="primary-btn upgrade-btn">Upgrade to Premium</button>
+          </div>
+        </section>
+
+        <section class="files-panel glass-card">
+          <div class="panel-header">
+            <div>
+              <h2>Your Files</h2>
+              <p>Manage uploads in one place.</p>
+            </div>
+            <input id="searchInput" type="search" placeholder="Search by file name..." />
+          </div>
+
+          <div id="filesCount" class="files-count">Loading files...</div>
+          <div id="fileList" class="file-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
