@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://manuals-rkhr.onrender.com/api';
 const TOKEN_KEY = 'manualUploadToken';
 const USER_KEY = 'manualUploadUser';
 const page = document.body.dataset.page;
@@ -406,7 +406,7 @@ function getPreviewContent(file) {
   const imageTypes = ['image/jpeg', 'image/png', 'image/jpg'];
   if (imageTypes.includes(file.fileType)) {
     const img = document.createElement('img');
-    img.src = `http://localhost:5000/${file.filePath}`;
+    img.src = `https://manuals-rkhr.onrender.com/${file.filePath}`;
     img.alt = file.originalName;
     return img;
   }
